@@ -1,0 +1,49 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.1.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: d47e6ef241687749b6804002155581bf9d6f0fab5bc9009ca3538db0c4a9a1cd
+
+name:           fpe
+version:        0.1.0
+synopsis:       Format-preserving encryption.
+category:       Cryptography
+maintainer:     Galen Huntington
+license:        MIT
+build-type:     Simple
+
+library
+  exposed-modules:
+      FPE.FF1
+  other-modules:
+      Paths_fpe
+  hs-source-dirs:
+      ./.
+  default-extensions: TypeApplications ScopedTypeVariables
+  ghc-options: -O2 -Wall -Wredundant-constraints -Wno-name-shadowing -Wno-missing-signatures -Wno-unused-do-bind -Wno-orphans -Wcompat
+  build-depends:
+      base
+    , bytestring
+    , integer-logarithms
+    , vector
+  default-language: Haskell2010
+
+test-suite suite
+  type: exitcode-stdio-1.0
+  main-is: ff1test.hs
+  other-modules:
+      FPE.FF1
+      Paths_fpe
+  hs-source-dirs:
+      ./.
+  default-extensions: TypeApplications ScopedTypeVariables
+  ghc-options: -O2 -Wall -Wredundant-constraints -Wno-name-shadowing -Wno-missing-signatures -Wno-unused-do-bind -Wno-orphans -Wcompat
+  build-depends:
+      base
+    , bytestring
+    , cryptonite
+    , integer-logarithms
+    , vector
+  default-language: Haskell2010
