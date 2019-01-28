@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 62e4119d899f78eea845bced058236e1a4c6d102dba9580a85aee31e64342e04
+-- hash: a173b53c82736ddea70821b7efee6a6d6d97f4342abbea9ebb677f273956fac3
 
 name:           fpe
 version:        0.1.0
@@ -14,6 +14,7 @@ homepage:       https://github.com/galenhuntington/fpe#readme
 bug-reports:    https://github.com/galenhuntington/fpe/issues
 maintainer:     Galen Huntington
 license:        MIT
+license-file:   LICENSE
 build-type:     Simple
 
 source-repository head
@@ -28,7 +29,7 @@ library
   hs-source-dirs:
       ./.
   default-extensions: TypeApplications ScopedTypeVariables
-  ghc-options: -O2 -Wall -Wredundant-constraints -Wno-name-shadowing -Wno-missing-signatures -Wno-unused-do-bind -Wno-orphans -Wcompat
+  ghc-options: -Wall -Wredundant-constraints -Wno-name-shadowing -Wno-missing-signatures -Wno-unused-do-bind -Wno-orphans -Wcompat
   build-depends:
       base
     , bytestring
@@ -45,7 +46,7 @@ test-suite suite
   hs-source-dirs:
       ./.
   default-extensions: TypeApplications ScopedTypeVariables
-  ghc-options: -O2 -Wall -Wredundant-constraints -Wno-name-shadowing -Wno-missing-signatures -Wno-unused-do-bind -Wno-orphans -Wcompat
+  ghc-options: -Wall -Wredundant-constraints -Wno-name-shadowing -Wno-missing-signatures -Wno-unused-do-bind -Wno-orphans -Wcompat
   build-depends:
       base
     , bytestring

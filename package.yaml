@@ -2,12 +2,11 @@ name: fpe
 version: 0.1.0
 synopsis: Format-preserving encryption.
 maintainer: Galen Huntington
-license: MIT
 category: Cryptography
 
 github: galenhuntington/fpe
 
-ghc-options: -O2 -Wall -Wredundant-constraints -Wno-name-shadowing -Wno-missing-signatures -Wno-unused-do-bind -Wno-orphans -Wcompat
+ghc-options: -Wall -Wredundant-constraints -Wno-name-shadowing -Wno-missing-signatures -Wno-unused-do-bind -Wno-orphans -Wcompat
 
 source-dirs:
    - .
