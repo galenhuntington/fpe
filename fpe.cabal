@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: a173b53c82736ddea70821b7efee6a6d6d97f4342abbea9ebb677f273956fac3
+-- hash: a63249371abff60317dfe925c0da67b9a9a972adc99adb77de045dadc63e58fb
 
 name:           fpe
 version:        0.1.0
@@ -31,7 +31,7 @@ library
   default-extensions: TypeApplications ScopedTypeVariables
   ghc-options: -Wall -Wredundant-constraints -Wno-name-shadowing -Wno-missing-signatures -Wno-unused-do-bind -Wno-orphans -Wcompat
   build-depends:
-      base
+      base >=4.9 && <5
     , bytestring
     , integer-logarithms
     , vector
@@ -48,7 +48,7 @@ test-suite suite
   default-extensions: TypeApplications ScopedTypeVariables
   ghc-options: -Wall -Wredundant-constraints -Wno-name-shadowing -Wno-missing-signatures -Wno-unused-do-bind -Wno-orphans -Wcompat
   build-depends:
-      base
+      base >=4.9 && <5
     , bytestring
     , cryptonite
     , integer-logarithms

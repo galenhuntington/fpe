@@ -18,7 +18,7 @@ default-extensions:
 library: {}
 
 dependencies:
-   - base
+   - base >= 4.9 && < 5
    - bytestring
    - vector
    - integer-logarithms
