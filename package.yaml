@@ -19,9 +19,9 @@ library: {}
 
 dependencies:
    - base >= 4.9 && < 5
-   - bytestring
-   - vector
-   - integer-logarithms
+   - bytestring >= 0.10 && < 0.11
+   - vector >= 0.12 && < 0.13
+   - integer-logarithms >= 1 && < 1.1
 
 tests:
    suite:
