@@ -1,13 +1,13 @@
-cabal-version: 1.12
+cabal-version: 1.18
 
 -- This file has been generated from package.yaml by hpack version 0.31.1.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 8fbbdfc71a8796c3cda5555879b81de5510d7c2662c55142ea49394a54df5cdb
+-- hash: e71c8a5c25b6f4d91367a858231df53931e152636540804b099f15ac62d85392
 
 name:           fpe
-version:        0.1.0
+version:        0.1.1
 synopsis:       Format-preserving encryption.
 category:       Cryptography
 homepage:       https://github.com/galenhuntington/fpe#readme
@@ -16,6 +16,8 @@ maintainer:     Galen Huntington
 license:        MIT
 license-file:   LICENSE
 build-type:     Simple
+extra-doc-files:
+    README.md
 
 source-repository head
   type: git
