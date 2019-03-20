@@ -1,10 +1,10 @@
 cabal-version: 1.18
 
--- This file has been generated from package.yaml by hpack version 0.31.1.
+-- This file has been generated from package.yaml by hpack version 0.31.2.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: e71c8a5c25b6f4d91367a858231df53931e152636540804b099f15ac62d85392
+-- hash: 433f5af7339a98079c6ac739a5588ac3c2e3a3c4084f326b3d3a9347b4607d09
 
 name:           fpe
 version:        0.1.1
@@ -12,6 +12,7 @@ synopsis:       Format-preserving encryption.
 category:       Cryptography
 homepage:       https://github.com/galenhuntington/fpe#readme
 bug-reports:    https://github.com/galenhuntington/fpe/issues
+author:         Galen Huntington
 maintainer:     Galen Huntington
 license:        MIT
 license-file:   LICENSE

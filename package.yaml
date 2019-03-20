@@ -1,7 +1,7 @@
 name: fpe
 version: 0.1.1
 synopsis: Format-preserving encryption.
-maintainer: Galen Huntington
+author: Galen Huntington
 category: Cryptography
 
 github: galenhuntington/fpe
