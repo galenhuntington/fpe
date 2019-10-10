@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/galenhuntington/fpe.svg?branch=master)](https://travis-ci.com/galenhuntington/fpe)
+
 _Format-preserving encryption_ encrypts data without changing its
 format.  An example is encrypting a 16-digit credit card number
 as 16 digits.  The encryption uses a key, which is secret, and an
