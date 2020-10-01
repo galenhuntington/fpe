@@ -1,3 +1,4 @@
+[![Hackage](https://img.shields.io/hackage/v/fpe.svg)](https://hackage.haskell.org/package/fpe)
 [![Build Status](https://travis-ci.com/galenhuntington/fpe.svg?branch=master)](https://travis-ci.com/galenhuntington/fpe)
 
 _Format-preserving encryption_ encrypts data without changing its
