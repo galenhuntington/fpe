@@ -1,10 +1,10 @@
 cabal-version: 1.18
 
--- This file has been generated from package.yaml by hpack version 0.31.2.
+-- This file has been generated from package.yaml by hpack version 0.34.2.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 433f5af7339a98079c6ac739a5588ac3c2e3a3c4084f326b3d3a9347b4607d09
+-- hash: 3c768fb48672d3ece7a8fe7e85a0ce129de991085546626fcd819ae108c9aaa2
 
 name:           fpe
 version:        0.1.1
@@ -35,9 +35,9 @@ library
   ghc-options: -Wall -Wredundant-constraints -Wno-name-shadowing -Wno-missing-signatures -Wno-unused-do-bind -Wno-orphans -Wcompat
   build-depends:
       base >=4.9 && <5
-    , bytestring >=0.10 && <0.11
+    , bytestring >=0.10 && <0.12
     , integer-logarithms >=1 && <1.1
-    , vector >=0.12 && <0.13
+    , vector >=0.12 && <0.14
   default-language: Haskell2010
 
 test-suite suite
@@ -52,8 +52,8 @@ test-suite suite
   ghc-options: -Wall -Wredundant-constraints -Wno-name-shadowing -Wno-missing-signatures -Wno-unused-do-bind -Wno-orphans -Wcompat
   build-depends:
       base >=4.9 && <5
-    , bytestring >=0.10 && <0.11
+    , bytestring >=0.10 && <0.12
     , cryptonite
     , integer-logarithms >=1 && <1.1
-    , vector >=0.12 && <0.13
+    , vector >=0.12 && <0.14
   default-language: Haskell2010
