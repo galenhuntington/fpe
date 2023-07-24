@@ -1,13 +1,13 @@
 cabal-version: 1.18
 
--- This file has been generated from package.yaml by hpack version 0.34.2.
+-- This file has been generated from package.yaml by hpack version 0.35.2.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 3c768fb48672d3ece7a8fe7e85a0ce129de991085546626fcd819ae108c9aaa2
+-- hash: 7c1d4de3459a0ae08db6ac62316d35c53b83835bd66b402d61fc598469099456
 
 name:           fpe
-version:        0.1.1
+version:        0.1.2
 synopsis:       Format-preserving encryption.
 category:       Cryptography
 homepage:       https://github.com/galenhuntington/fpe#readme
@@ -30,12 +30,14 @@ library
   other-modules:
       Paths_fpe
   hs-source-dirs:
-      ./.
-  default-extensions: TypeApplications ScopedTypeVariables
+      ./
+  default-extensions:
+      TypeApplications
+      ScopedTypeVariables
   ghc-options: -Wall -Wredundant-constraints -Wno-name-shadowing -Wno-missing-signatures -Wno-unused-do-bind -Wno-orphans -Wcompat
   build-depends:
       base >=4.9 && <5
-    , bytestring >=0.10 && <0.12
+    , bytestring >=0.10 && <0.13
     , integer-logarithms >=1 && <1.1
     , vector >=0.12 && <0.14
   default-language: Haskell2010
@@ -47,12 +49,14 @@ test-suite suite
       FPE.FF1
       Paths_fpe
   hs-source-dirs:
-      ./.
-  default-extensions: TypeApplications ScopedTypeVariables
+      ./
+  default-extensions:
+      TypeApplications
+      ScopedTypeVariables
   ghc-options: -Wall -Wredundant-constraints -Wno-name-shadowing -Wno-missing-signatures -Wno-unused-do-bind -Wno-orphans -Wcompat
   build-depends:
       base >=4.9 && <5
-    , bytestring >=0.10 && <0.12
+    , bytestring >=0.10 && <0.13
     , cryptonite
     , integer-logarithms >=1 && <1.1
     , vector >=0.12 && <0.14

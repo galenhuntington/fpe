@@ -19,7 +19,7 @@ type Crypter v a = BlockCipher -> Int -> Tweak -> v a -> v a
 --  Defined in FF1 step 3 using (redundant) double ceiling.
 bytesFor :: Int -> Int -> Int
 bytesFor radix len =
-   integerLog2 ((fromIntegral radix ^ len) - 1) `div` 8 + 1
+   integerLog2' ((fromIntegral radix ^ len) - 1) `div` 8 + 1
 
 xorBytes :: S.ByteString -> S.ByteString -> S.ByteString
 xorBytes a b = S.pack $ S.zipWith xor a b
