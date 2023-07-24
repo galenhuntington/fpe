@@ -1,5 +1,5 @@
 [![Hackage](https://img.shields.io/hackage/v/fpe.svg)](https://hackage.haskell.org/package/fpe)
-[![Build Status](https://travis-ci.com/galenhuntington/fpe.svg?branch=master)](https://travis-ci.com/galenhuntington/fpe)
+![Build status](https://github.com/galenhuntington/fpe/actions/workflows/haskell.yml/badge.svg)
 
 _Format-preserving encryption_ encrypts data without changing its
 format.  An example is encrypting a 16-digit credit card number
