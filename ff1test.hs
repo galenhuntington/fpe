@@ -8,7 +8,7 @@ import qualified Data.Vector.Unboxed as V
 import qualified Data.ByteString as B
 
 
---  The first two samples from
+--  The first three samples from
 --  https://csrc.nist.gov/CSRC/media/Projects/Cryptographic-Standards-and-Guidelines/documents/examples/FF1samples.pdf
 
 CryptoPassed (key :: AES128) = cipherInit $ B.pack [
@@ -27,4 +27,12 @@ main = do
    let crypt = FF1.encrypt cipher 10 tweak plain
    print crypt
    when (V.toList crypt /= [6,1,2,4,2,0,0,7,7,3]) $ error "bad tweak encrypt"
+   --  Sample 3 has an odd-length message, exercising the asymmetric split.
+   let tweak = B.pack [0x37, 0x37, 0x37, 0x37, 0x70, 0x71, 0x72, 0x73, 0x37, 0x37, 0x37]
+   let plain = V.fromList @Int [0..18]
+   let crypt = FF1.encrypt cipher 36 tweak plain
+   print crypt
+   when (V.toList crypt /= [10,9,29,31,4,0,22,21,21,9,20,13,30,5,0,9,14,30,22])
+     $ error "bad radix-36 encrypt"
+   when (FF1.decrypt cipher 36 tweak crypt /= plain) $ error "bad radix-36 decrypt"
 
