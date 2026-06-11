@@ -1,10 +1,4 @@
-cabal-version: 1.18
-
--- This file has been generated from package.yaml by hpack version 0.38.3.
---
--- see: https://github.com/sol/hpack
---
--- hash: f993a134f26f3daaea5ea541a62bd424622760412c39c7883de7024c4073da33
+cabal-version: 2.2
 
 name:           fpe
 version:        0.1.2
@@ -24,40 +18,28 @@ source-repository head
   type: git
   location: https://github.com/galenhuntington/fpe
 
-library
-  exposed-modules:
-      FPE.FF1
-  other-modules:
-      Paths_fpe
-  hs-source-dirs:
-      ./
-  default-extensions:
-      TypeApplications
-      ScopedTypeVariables
-  ghc-options: -Wall -Wredundant-constraints -Wno-missing-signatures -Wcompat
+common opts
+  default-language: GHC2021
+  ghc-options: -Wall -Wredundant-constraints -Wcompat -O2
   build-depends:
-      base >=4.9 && <5
+      base >=4.16 && <5
     , bytestring >=0.10 && <0.13
-    , integer-logarithms >=1 && <1.1
     , vector >=0.12 && <0.14
-  default-language: Haskell2010
+
+library
+  import: opts
+  exposed-modules:
+    FPE.FF1
+  build-depends:
+    integer-logarithms >=1 && <1.1
+  hs-source-dirs:
+    ./
 
 test-suite suite
+  import: opts
   type: exitcode-stdio-1.0
   main-is: ff1test.hs
-  other-modules:
-      FPE.FF1
-      Paths_fpe
   hs-source-dirs:
-      ./
-  default-extensions:
-      TypeApplications
-      ScopedTypeVariables
-  ghc-options: -Wall -Wredundant-constraints -Wno-missing-signatures -Wcompat
-  build-depends:
-      base >=4.9 && <5
-    , bytestring >=0.10 && <0.13
-    , crypton
-    , integer-logarithms >=1 && <1.1
-    , vector >=0.12 && <0.14
-  default-language: Haskell2010
+      test
+  build-depends: crypton, fpe
+

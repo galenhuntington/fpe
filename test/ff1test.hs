@@ -13,10 +13,12 @@ import qualified Data.ByteString as B
 --  The first three samples from
 --  https://csrc.nist.gov/CSRC/media/Projects/Cryptographic-Standards-and-Guidelines/documents/examples/FF1samples.pdf
 
-CryptoPassed (key :: AES128) = cipherInit $ B.pack [
+key :: AES128
+CryptoPassed key = cipherInit $ B.pack [
   0x2b, 0x7e, 0x15, 0x16, 0x28, 0xae, 0xd2, 0xa6,
   0xab, 0xf7, 0x15, 0x88, 0x09, 0xcf, 0x4f, 0x3c]
 
+main :: IO ()
 main = do
    let cipher = ecbEncrypt key
    let tweak = mempty
