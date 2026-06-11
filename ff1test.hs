@@ -1,3 +1,5 @@
+{-# OPTIONS_GHC -Wno-name-shadowing -Wno-incomplete-uni-patterns #-}
+
 import FPE.FF1 as FF1
 import Crypto.Cipher.Types
 import Crypto.Cipher.AES
@@ -27,7 +29,6 @@ main = do
    let crypt = FF1.encrypt cipher 10 tweak plain
    print crypt
    when (V.toList crypt /= [6,1,2,4,2,0,0,7,7,3]) $ error "bad tweak encrypt"
-   --  Sample 3 has an odd-length message, exercising the asymmetric split.
    let tweak = B.pack [0x37, 0x37, 0x37, 0x37, 0x70, 0x71, 0x72, 0x73, 0x37, 0x37, 0x37]
    let plain = V.fromList @Int [0..18]
    let crypt = FF1.encrypt cipher 36 tweak plain

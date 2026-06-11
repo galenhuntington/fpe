@@ -1,7 +1,7 @@
 module FPE.FF1 (encrypt, decrypt, BlockCipher, Crypter, Tweak) where
 
 import Data.Bits
-import Control.Arrow
+import Control.Arrow hiding (loop)
 import Control.Monad
 import Data.Tuple (swap)
 import Math.NumberTheory.Logarithms
